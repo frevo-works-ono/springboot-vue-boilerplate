@@ -45,4 +45,8 @@ public class User implements Serializable {
     @OneToMany(mappedBy = "user")
     @JoinColumn(name = "user_id", referencedColumnName = "user_id")
     private List<Todo> todos;
+
+    public User(Integer userId) {
+        this.userId = userId;
+    }
 }

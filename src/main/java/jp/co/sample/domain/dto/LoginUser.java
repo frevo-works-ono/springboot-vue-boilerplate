@@ -3,6 +3,7 @@ package jp.co.sample.domain.dto;
 import org.springframework.security.core.authority.AuthorityUtils;
 
 import jp.co.sample.domain.model.User;
+import lombok.Getter;
 
 public class LoginUser extends org.springframework.security.core.userdetails.User {
     /**
@@ -10,8 +11,10 @@ public class LoginUser extends org.springframework.security.core.userdetails.Use
      */
     private static final long serialVersionUID = 1L;
 
-    private int userId;
+    @Getter
+    private Integer userId;
 
+    @Getter
     private String userName;
 
     /*
